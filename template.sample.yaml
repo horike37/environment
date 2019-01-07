@@ -488,6 +488,26 @@ Resources:
     DependsOn: AlisAppDomain
 
   #
+  # Authlete
+  #
+  AutlteleApiKey:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: !Sub "${AWS::StackName}AutlteleApiKey"
+      Description: |
+        AuthleteのAPIキー
+      Type: String
+      Value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  AutlteleApiSecret:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: !Sub "${AWS::StackName}AutlteleApiSecret"
+      Description: |
+        AuthleteのAPIシークレット
+      Type: String
+      Value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  #
   # batch
   # FYI: batchリポジトリのSSMパラメータのみ、batchリポジトリ自身が保持しているのでそちらを参照
   #
